@@ -11,7 +11,7 @@ from aiohttp import client_exceptions
 from APsystemsEZ1 import APsystemsEZ1M, ReturnOutputData
 
 from homeassistant.config_entries import ConfigEntry
-from homeassistant.const import CONF_IP_ADDRESS, Platform
+from homeassistant.const import CONF_IP_ADDRESS, CONF_PORT, Platform
 from homeassistant.core import HomeAssistant
 from homeassistant.helpers.update_coordinator import DataUpdateCoordinator
 
@@ -27,7 +27,7 @@ async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
     hass.data.setdefault(DOMAIN, {})
     # https://developers.home-assistant.io/docs/integration_fetching_data#coordinated-single-api-poll-for-data-for-all-entities
 
-    api = APsystemsEZ1M(ip_address=entry.data[CONF_IP_ADDRESS], timeout=8)
+    api = APsystemsEZ1M(ip_address=entry.data[CONF_IP_ADDRESS], port=entry.data[CONF_PORT], timeout=8)
     coordinator = ApSystemsDataCoordinator(
         hass, api, interval=entry.data.get(UPDATE_INTERVAL)
     )

@@ -12,7 +12,7 @@ from homeassistant.components.number import (
     NumberDeviceClass,
     NumberEntity,
 )
-from homeassistant.const import CONF_IP_ADDRESS, CONF_NAME
+from homeassistant.const import CONF_IP_ADDRESS, CONF_PORT, CONF_NAME
 from homeassistant.core import HomeAssistant
 import homeassistant.helpers.config_validation as cv
 from homeassistant.helpers.device_registry import DeviceInfo
@@ -23,6 +23,7 @@ from .const import DOMAIN
 
 PLATFORM_SCHEMA = PLATFORM_SCHEMA.extend({
     vol.Required(CONF_IP_ADDRESS): cv.string,
+    vol.Optional(CONF_PORT, default=8050): int,
     vol.Optional(CONF_NAME, default="solar"): cv.string
 })
 
@@ -35,7 +36,7 @@ async def async_setup_entry(
 ) -> None:
     """Set up the sensor platform."""
     config = hass.data[DOMAIN][config_entry.entry_id]
-    api = APsystemsEZ1M(ip_address=config[CONF_IP_ADDRESS])
+    api = APsystemsEZ1M(ip_address=config[CONF_IP_ADDRESS], port=config[CONF_PORT])
 
     numbers = [
         MaxPower(api, device_name=config[CONF_NAME], sensor_name="Max Output Power", sensor_id="max_output_power")
