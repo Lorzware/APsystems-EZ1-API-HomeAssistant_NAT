@@ -6,6 +6,7 @@
                 "data": {
                     "name": "Der Name deines Geräts",
                     "ip_address": "Die IP Adresse deines Geräts",
+                    "port": "Port des Wechselrichters",
                     "check": "Bestätige und teste die Verbindung?",
                     "update_interval": "Nach wie vielen Sekund soll der Wechselrichter abgefragt werden?"
                 },

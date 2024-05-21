@@ -6,6 +6,7 @@
                 "data": {
                     "name": "The name of your device",
                     "ip_address": "The IP address of your device",
+                    "port": "The port of the inverter",
                     "check": "Confirm and test the connection?"
                 },
                 "description": "Add your APsystems inverter:",

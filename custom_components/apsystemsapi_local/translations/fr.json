@@ -6,6 +6,7 @@
                 "data": {
                     "name": "Le nom de votre appareil",
                     "ip_address": "L'adresse IP de votre appareil",
+                    "port": "port",
                     "check": "Confirmer et tester la connexion?"
                 },
                 "description": "Ajoutez votre onduleur APsystems:",

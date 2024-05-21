@@ -6,6 +6,7 @@
                 "data": {
                     "name": "El nombre de tu dispositivo",
                     "ip_address": "La dirección IP de tu dispositivo",
+                    "port": "port",
                     "check": "¿Confirmar y probar la conexión?"
                 },
                 "description": "Agrega tu inversor de APsystems:",
