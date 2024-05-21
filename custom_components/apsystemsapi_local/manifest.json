@@ -1,6 +1,6 @@
 {
-  "domain": "apsystemsapi_local",
-  "name": "APsystems Local API",
+  "domain": "apsystemsapi_local_lorz",
+  "name": "APsystems Local API Lorz",
   "codeowners": [
     "@mawoka-myblock",
     "@SonnenladenGmbH"
