@@ -21,7 +21,7 @@ DATA_SCHEMA = vol.Schema(
     }
 )
 
-class APsystemsLocalAPIFlow(config_entries.ConfigFlow, domain=DOMAIN):
+class APsystemsLocalAPILorzFlow(config_entries.ConfigFlow, domain=DOMAIN):
     """Config flow for Blueprint."""
 
     VERSION = 1
